@@ -1,0 +1,29 @@
+# YASMR's http bind address
+address: "127.0.0.1"
+# YASMR's http server port
+port: 8080
+# Where the artifacts will be saved
+repositoryFolder: "/path/to/the/repository/folder"
+# If enabled, when accessing the root file (http://ip:port/) a custom index can be shown
+# Useful if you want to show a small tutorial on how to add your repository
+isIndexEnabled: true
+# Where the index.html is
+indexPath: "/path/to/your/index/file.html"
+# If enabled, allows you to have an "assets" folder, available in http://ip:port/assets/
+# Useful to host css/js for your repository index
+isAssetsEnabled: true
+# Where the assets are
+assetsFolder: "/path/to/your/assets/folder"
+# If you want to require authentication to upload files
+# If disabled, anyone will be able to upload files to your Maven repository!
+useAuthentication: true
+credentials:
+- user: "loritta"
+  password: "lori_is_so_cute"
+  # Restricts the allowed paths the user can upload artifacts
+  # Path = Maven's groupId
+  allowedPaths: [ "net/perfectdreams/" ]
+- user: "power"
+  password: "pantufa_is_also_very_cute"
+  # "*" can be used as a wildcard
+  allowedPaths: [ "*" ]
