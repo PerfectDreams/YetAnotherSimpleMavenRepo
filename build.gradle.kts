@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.3.72"
+    kotlin("jvm") version "1.4.21"
 }
 
 group = "net.perfectdreams.yadls"
@@ -12,7 +12,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation("io.github.microutils:kotlin-logging:1.8.0.1")
-    implementation("ch.qos.logback:logback-classic:1.3.0-alpha5")
+    implementation("ch.qos.logback:logback-classic:1.3.0-alpha4")
     implementation("io.ktor:ktor-server-core:1.5.0")
     implementation("io.ktor:ktor-server-netty:1.5.0")
     implementation("org.yaml:snakeyaml:1.26")
