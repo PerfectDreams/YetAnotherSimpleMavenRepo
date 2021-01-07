@@ -1,6 +1,7 @@
 package net.perfectdreams.yetanothersimplemavenrepo
 
-import io.ktor.application.call
+import io.ktor.application.*
+import io.ktor.features.*
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.content.file
 import io.ktor.http.content.files
@@ -32,6 +33,9 @@ class YetAnotherSimpleMavenRepo(val yasmrConfig: YASMRConfig) {
         val repositoryFolderFile = File(yasmrConfig.repositoryFolder)
 
         embeddedServer(Netty, yasmrConfig.port, yasmrConfig.address) {
+            // Gradle does a HEAD request before trying to request
+            install(AutoHeadResponse)
+
             routing {
                 if (yasmrConfig.isAssetsEnabled)
                     static("assets") {
