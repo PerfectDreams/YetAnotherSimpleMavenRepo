@@ -24,7 +24,6 @@ import java.util.*
 class YetAnotherSimpleMavenRepo(val yasmrConfig: YASMRConfig) {
     companion object {
         private val logger = KotlinLogging.logger {}
-        val repo = File("C:\\Users\\Leonardo\\Documents\\LorittaAssets\\YetAnotherMavenRepo\\repo\\")
     }
 
     fun start() {
